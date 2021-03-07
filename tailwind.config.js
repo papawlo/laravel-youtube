@@ -10,7 +10,11 @@ module.exports = {
             sans: ["Roboto", "sans-serif"],
             serif: ["Merriweather", "serif"],
         },
-        extend: {},
+        extend: {
+             width:{
+            '96':'24rem'
+        }
+        },
     },
     variants: {
         extend: {},

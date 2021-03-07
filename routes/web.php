@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\VideosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,4 +16,6 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-Route::view('/', 'index');
+// Route::resource('/', VideosController::class);
+Route::get('/', [VideosController::class, 'index']);
+// Route::view('/', 'index');
