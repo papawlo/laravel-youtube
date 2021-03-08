@@ -32,6 +32,7 @@ return [
 
     'google' => [
         'key' => env('GOOGLE_API_KEY'),
+        'youtubeUrl' => env('GOOGLE_API_SEARCH_URL'),
     ],
 
 ];

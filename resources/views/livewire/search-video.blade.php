@@ -15,13 +15,11 @@
 
     @if (strlen($search)>3)
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-        @if (count($searchResults) > 0)
-        @foreach ($searchResults as $video)
+        @forelse ($searchResults as $video)
         <x-video-card :video="$video" />
-        @endforeach
-        @else
+        @empty
         <div class="px-3 py-3">No Results for: {{$search}}</div>
-        @endif
+        @endforelse
     </div> <!-- end card -->
     @endif
 </div>
