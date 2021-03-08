@@ -5,7 +5,7 @@
     </a>
     <div class="mt-2">
         <a href="{{$video["url"]}}" class="text-lg mt-2 hover:text-gray-300">
-            {{$video["title"]}}
+            {!! $video["title"] !!}
         </a>
     </div>
 </div> <!-- end card -->

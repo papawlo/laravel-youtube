@@ -24,10 +24,6 @@ class SearchVideo extends Component
                 ]);
 
                 $searchResults=  $response->json()['items'];
-        //                echo '<pre>';
-        // var_dump($searchResults);
-        // echo '</pre>';
-        // exit;
 
             } catch (\Throwable $th) {
                 $errors =$th->message();
@@ -36,14 +32,8 @@ class SearchVideo extends Component
 
 
         $viewModel = new VideosViewModel($searchResults);
-        // echo '<pre>';
-        // var_dump($viewModel);
-        // echo '</pre>';
-        // exit;
 
         return view('livewire.search-video',$viewModel);
-        // return view('livewire.search-video',[
-        //     'searchResults'=>$searchResults
-        // ]);
+
     }
 }
