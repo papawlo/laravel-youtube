@@ -15,9 +15,9 @@ class VideosController extends Controller
     public function index()
     {
 
-        $youtubeApiUrl="https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=flow&type=video&key=".config('services.google.key');
-        $videos = Http::get($youtubeApiUrl)->json()['items'];
-
+        // $youtubeApiUrl="https://youtube.googleapis.com/youtube/v3/search?part=snippet&q=flow&type=video&key=".config('services.google.key');
+        // $videos = Http::get($youtubeApiUrl)->json()['items'];
+        $videos=[];
         return view('index',[
             "videos"=>$videos,
             ]);
